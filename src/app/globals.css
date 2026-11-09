@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+ * 🎨 VEINE STUDIO — VANILLA CSS CORE & DESIGN TOKENS
+ * Exact Color Palette:
+ * - Navy Base:  #011427
+ * - Ocean Teal: #0E7E8E
+ * - Ice Aqua:   #BAE5E9
+ * - Crisp Ice:  #EFEFEF
+ * ============================================================================ */
+
+:root {
+  --veine-navy: #011427;
+  --veine-navy-elevated: #041e38;
+  --veine-teal: #0e7e8e;
+  --veine-aqua: #bae5e9;
+  --veine-ice: #efefef;
+
+  --glow-teal: rgba(14, 126, 142, 0.35);
+  --glow-aqua: rgba(186, 229, 233, 0.25);
+  --border-subtle: rgba(186, 229, 233, 0.14);
+  --border-bright: rgba(186, 229, 233, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--veine-navy);
+  color: var(--veine-ice);
+}
+
+body {
+  background-color: var(--veine-navy);
+  color: var(--veine-ice);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+::selection {
+  background-color: var(--veine-aqua);
+  color: var(--veine-navy);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--veine-navy);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--veine-teal);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--veine-aqua);
+}
+
+/* ============================================================================
+ * 🌌 ATMOSPHERIC BACKGROUND GRID & AMBIENT GLOW (Vanilla CSS)
+ * ============================================================================ */
+
+.veine-bg-grid {
+  background-color: var(--veine-navy);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(14, 126, 142, 0.22) 0%, transparent 40%),
+    radial-gradient(circle at 85% 25%, rgba(186, 229, 233, 0.12) 0%, transparent 35%),
+    radial-gradient(circle at 50% 85%, rgba(14, 126, 142, 0.18) 0%, transparent 45%),
+    linear-gradient(to right, rgba(186, 229, 233, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(186, 229, 233, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}
+
+/* Subtle CRT / Game HUD Scanline Overlay */
+.veine-scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(1, 20, 39, 0.2) 50%,
+    rgba(1, 20, 39, 0.2)
+  );
+  background-size: 100% 4px;
+}
+
+/* ============================================================================
+ * 🍱 BENTO GRID CARDS & GLASSMORPHISM (Vanilla CSS + Mouse Spotlight)
+ * ============================================================================ */
+
+.bento-card {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(4, 34, 64, 0.72) 0%,
+    rgba(1, 20, 39, 0.88) 100%
+  );
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.bento-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    550px circle at var(--mouse-x, 50%) var(--mouse-y, 0%),
+    rgba(186, 229, 233, 0.11),
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-bright);
+  box-shadow:
+    0 20px 40px -15px rgba(1, 20, 39, 0.85),
+    0 0 28px -6px var(--glow-teal);
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+/* Variant: Vibrant Teal Bento Card (#0E7E8E) */
+.bento-card-teal {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #0e7e8e 0%,
+    #085561 100%
+  );
+  border: 1px solid rgba(186, 229, 233, 0.4);
+  border-radius: 1.5rem;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.bento-card-teal:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(14, 126, 142, 0.55);
+}
+
+/* Variant: Crisp Ice / Aqua Contrast Card (#BAE5E9 & #EFEFEF) */
+.bento-card-aqua {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #bae5e9 0%,
+    #efefef 100%
+  );
+  color: var(--veine-navy);
+  border: 1px solid #efefef;
+  border-radius: 1.5rem;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.bento-card-aqua:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(186, 229, 233, 0.35);
+}
+
+/* ============================================================================
+ * ⚡ KINETIC TYPOGRAPHY & GAME HUD ACCENTS
+ * ============================================================================ */
+
+.kinetic-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--veine-aqua);
+  transition: all 0.3s ease;
+}
+
+.kinetic-outline:hover {
+  color: var(--veine-aqua);
+  text-shadow: 0 0 24px rgba(186, 229, 233, 0.55);
+}
+
+.kinetic-gradient-text {
+  background: linear-gradient(90deg, #efefef 0%, #bae5e9 50%, #0e7e8e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Game HUD Corner Brackets */
+.hud-bracket {
+  position: relative;
+}
+.hud-bracket::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--veine-aqua);
+  border-right: 2px solid var(--veine-aqua);
+  opacity: 0.5;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+.hud-bracket:hover::after {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+}
+
+/* Marquee Masking */
+.marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+/* Tactile Gen Z Neo-Button */
+.veine-btn-primary {
+  background-color: var(--veine-aqua);
+  color: var(--veine-navy);
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 0 0 rgba(186, 229, 233, 0.6);
+}
+
+.veine-btn-primary:hover {
+  background-color: var(--veine-ice);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px -5px rgba(186, 229, 233, 0.45);
+}
+
+.veine-btn-secondary {
+  background-color: rgba(14, 126, 142, 0.2);
+  color: var(--veine-ice);
+  border: 1px solid rgba(186, 229, 233, 0.35);
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+}
+
+.veine-btn-secondary:hover {
+  background-color: var(--veine-teal);
+  border-color: var(--veine-aqua);
+  transform: translateY(-2px);
+}
+

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" fill="none">
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="540" y2="960" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#011427" />
+      <stop offset="100%" stop-color="#073752" />
+    </linearGradient>
+  </defs>
+  <rect width="540" height="960" fill="url(#mbg)" />
+
+  <!-- Status Bar -->
+  <text x="45" y="52" fill="#EFEFEF" font-family="monospace" font-size="20" font-weight="bold">09:41</text>
+  <rect x="435" y="36" width="55" height="20" rx="6" fill="#BAE5E9" />
+
+  <!-- App Header Card -->
+  <rect x="40" y="95" width="460" height="170" rx="28" fill="#0E7E8E" stroke="#BAE5E9" stroke-opacity="0.5" stroke-width="2" />
+  <text x="72" y="148" fill="#BAE5E9" font-family="monospace" font-size="18">VEINE MOBILE // SYNC</text>
+  <text x="72" y="192" fill="#EFEFEF" font-family="sans-serif" font-size="34" font-weight="bold">Rp 18.450.000</text>
+  <rect x="72" y="214" width="160" height="28" rx="14" fill="#011427" />
+  <text x="92" y="233" fill="#BAE5E9" font-family="monospace" font-size="14">+24.8% BULAN INI</text>
+
+  <!-- Activity Chart Box -->
+  <rect x="40" y="295" width="460" height="250" rx="28" fill="#042240" stroke="#BAE5E9" stroke-opacity="0.25" stroke-width="2" />
+  <text x="72" y="342" fill="#BAE5E9" font-family="monospace" font-size="18">REAL-TIME TELEMETRY</text>
+  <polyline points="72,490 145,440 220,465 295,385 375,410 460,350" fill="none" stroke="#BAE5E9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="460" cy="350" r="10" fill="#EFEFEF" />
+
+  <!-- Quick Action Tiles -->
+  <rect x="40" y="575" width="218" height="160" rx="24" fill="#042240" stroke="#BAE5E9" stroke-opacity="0.3" stroke-width="2" />
+  <circle cx="95" cy="630" r="24" fill="#0E7E8E" />
+  <text x="72" y="695" fill="#EFEFEF" font-family="sans-serif" font-size="22" font-weight="bold">Biometric</text>
+
+  <rect x="282" y="575" width="218" height="160" rx="24" fill="#BAE5E9" />
+  <circle cx="337" cy="630" r="24" fill="#011427" />
+  <text x="314" y="695" fill="#011427" font-family="sans-serif" font-size="22" font-weight="bold">Instant API</text>
+
+  <!-- Bottom Nav Pill -->
+  <rect x="80" y="840" width="380" height="72" rx="36" fill="#011427" stroke="#BAE5E9" stroke-opacity="0.4" stroke-width="2" />
+  <circle cx="165" cy="876" r="14" fill="#BAE5E9" />
+  <circle cx="270" cy="876" r="14" fill="#0E7E8E" />
+  <circle cx="375" cy="876" r="14" fill="#0E7E8E" />
+</svg>
+
