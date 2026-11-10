@@ -40,11 +40,11 @@ Kamu **tidak memerlukan database atau backend** untuk menambah portfolio. Semua 
 
 ## ☁️ Cara Deploy ke AWS Amplify
 
-Project ini sudah dilengkapi dengan konfigurasi [`amplify.yml`](./amplify.yml) dan `output: 'export'` di [`next.config.mjs`](./next.config.mjs) agar kompatibel penuh dengan **AWS Amplify Hosting**:
+Project ini sudah dilengkapi dengan konfigurasi [`amplify.yml`](./amplify.yml) (`baseDirectory: .next`) yang kompatibel dengan platform **Next.js (WEB_COMPUTE)** di **AWS Amplify Hosting**:
 
 1. Push repository ini ke **GitHub / GitLab / Bitbucket**.
 2. Buka **AWS Amplify Console** -> klik **Create new app**.
 3. Pilih repository `veinestudio` dan branch utama kamu.
-4. AWS Amplify akan otomatis mendeteksi file `amplify.yml` (output folder: `out`).
+4. AWS Amplify akan otomatis mendeteksi file `amplify.yml` (output folder: `.next`).
 5. Klik **Save and deploy** — selesai! Setiap kali kamu `git push`, website akan otomatis ter-update.
 
