@@ -641,7 +641,7 @@ export default function HomePage() {
             })}
           </div>
 
-          {/* Zero-Database Workflow Info Banner for the Owner */}
+          {/* Zero-Database Workflow Info Banner for the Owner
           <div className="bento-card p-5 sm:p-6 border-dashed border-veine-aqua/35">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="flex items-start sm:items-center gap-3">
@@ -699,7 +699,7 @@ export default function HomePage() {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
         </section>
 
         {/* =====================================================================

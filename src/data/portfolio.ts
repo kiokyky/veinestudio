@@ -82,7 +82,7 @@ export const SITE_PROFILE = {
   ],
   location: "Indonesia (UTC+7)",
   availability: "Open for Full-Stack, Mobile, Game Dev & Creative Collabs",
-  email: "hello@veinestudio.dev",
+  email: "veinestudio@gmail.com",
   playerStats: {
     level: "LVL. 25",
     classType: "Full-Stack (FE/BE) × Mobile × Game Dev",
@@ -90,11 +90,10 @@ export const SITE_PROFILE = {
     currentFocus: "Games, Cross-Platform Mobile & Scalable Web Systems",
   },
   socials: [
-    { label: "GitHub", handle: "@veinestudio", url: "https://github.com" },
-    { label: "Itch.io", handle: "veinestudio.itch.io", url: "https://itch.io" },
-    { label: "Instagram", handle: "@veine.studio", url: "https://instagram.com" },
-    { label: "LinkedIn", handle: "Veine Studio", url: "https://linkedin.com" },
-    { label: "X / Twitter", handle: "@veinestudio", url: "https://x.com" },
+    { label: "GitHub", handle: "@veinestudio", url: "https://github.com/kiokyky" },
+    { label: "Itch.io", handle: "veinestudio.itch.io", url: "https://itch.io/profile/veinestudio" },
+    { label: "Instagram", handle: "@veine.studio", url: "https://instagram.com/" },
+    { label: "LinkedIn", handle: "Veine Studio", url: "https://www.linkedin.com/company/veine-game-studio/home/" },
   ],
 };
 
@@ -216,29 +215,28 @@ export const PROJECTS: ProjectItem[] = [
   {
     id: "veine-pay-mobile",
     title: "VEINE PULSE // MOBILE",
-    subtitle: "Cross-Platform Fintech & Telemetry Super-App",
+    subtitle: "Offline-First Fintech & Go Cuan Mobile Companion",
     category: "Mobile App",
     year: "2026",
-    status: "Production",
+    status: "In Development",
     featured: true,
     bentoSize: "normal",
     accentTone: "teal",
     imageUrl: "/projects/pulsefit-mobile-preview.svg",
     imageFit: "portrait",
-    role: "Lead Mobile & Full-Stack Engineer",
+    role: "Mobile & Full-Stack Engineer",
     description:
-      "Aplikasi mobile lintas platform (iOS & Android) dengan sinkronisasi data real-time, autentikasi biometrik, dan animasi 60 FPS.",
+      "Aplikasi mobile pendamping ekosistem Go Cuan berbasis React Native (Expo) dengan arsitektur Offline-First SQLite, Biometric Vault, dan sinkronisasi cepat ke backend Go/Gin.",
     longDescription:
-      "Dirancang untuk memberikan pengalaman pengguna sehalus aplikasi native dengan arsitektur offline-first. Menggunakan gambar screenshot berasio 9:16 (portrait) yang otomatis ditampilkan di dalam bingkai smartphone tanpa merusak tinggi kartu Bento Grid.",
+      "Veine Pulse adalah evolusi mobile dari ekosistem manajemen keuangan Go Cuan. Dirancang dengan pendekatan Offline-First menggunakan SQLite lokal sehingga pengguna tetap bisa mencatat pemasukan & pengeluaran secara instan meski tanpa sinyal internet, lalu otomatis melakukan sinkronisasi antrean (queue sync) ke server Go/Gin di AWS EC2 saat kembali online.",
     highlights: [
-      "Arsitektur Offline-First dengan sinkronisasi antrean transaksi otomatis saat sinyal kembali",
-      "Keamanan berlapis dengan Biometric Auth (FaceID/Fingerprint) & enkripsi token lokal",
-      "Transisi layar dan micro-interactions halus 60 FPS di iOS maupun Android",
+      "Offline-First Sync Engine dengan SQLite lokal & antrean sinkronisasi otomatis ke REST API Go/Gin",
+      "Keamanan Biometric Vault (FaceID / Fingerprint via Expo LocalAuthentication) & penyimpanan JWT terenkripsi",
+      "Indikator visual 'Financial Pulse HUD' 60 FPS dengan palet warna khas Veine Studio",
     ],
-    techStack: ["React Native", "TypeScript", "Flutter", "REST API", "SQLite Sync"],
+    techStack: ["React Native", "Expo", "TypeScript", "Go/Gin API", "SQLite Sync", "Biometric Auth"],
     links: {
-      live: "https://github.com",
-      repo: "https://github.com",
+      repo: "https://github.com/kiokyky",
     },
   },
   {
@@ -278,6 +276,7 @@ export const PROJECTS: ProjectItem[] = [
     bentoSize: "large",
     accentTone: "ice",
     imageFit: "landscape",
+    imageUrl: "/projects/nexushub.png",
     role: "Frontend Architect & Creative Dev",
     description:
       "Website portfolio berkonsep Gen Z Bento Grid & Kinetic Typography yang memadukan identitas Full-Stack, Mobile, dan Game Studio.",
@@ -316,12 +315,12 @@ export const QUEST_LOG: QuestLogItem[] = [
     skills: ["C++", "Python", "Docker", "PostgreSQL", "Redis"],
   },
   {
-    year: "2023 — 2024",
+    year: "2024 — 2025",
     title: "Indie Game Crafter & Gameplay Programmer",
-    organization: "Game Jams & Prototype Lab",
-    type: "Milestone",
+    organization: "Insys Lab",
+    type: "Side Quest",
     description:
-      "Merancang mekanik gameplay, shader visual, dan sistem fisika di Unity & Godot yang menjadi cikal bakal lahirnya nama Veine Studio.",
-    skills: ["Unity", "Godot", "C# / GDScript", "Interactive Design"],
+      "Merancang mekanik gameplay, shader visual, dan sistem fisika pada game bernama `Stranded: Acrhipelago Myths` di Unity yang menjadi cikal bakal lahirnya nama Veine Studio.",
+    skills: ["Unity", "C#", "Interactive Design", "2D", "Pixel Art"],
   },
 ];

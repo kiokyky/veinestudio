@@ -7,22 +7,37 @@
   </defs>
   <rect width="540" height="960" fill="url(#mbg)" />
 
-  <!-- Status Bar -->
-  <text x="45" y="52" fill="#EFEFEF" font-family="monospace" font-size="20" font-weight="bold">09:41</text>
-  <rect x="435" y="36" width="55" height="20" rx="6" fill="#BAE5E9" />
+  <!-- Top Status Bar & RPG Level Pill -->
+  <text x="42" y="52" fill="#EFEFEF" font-family="monospace" font-size="18" font-weight="bold">LV.12 // RANGER</text>
+  <rect x="360" y="30" width="140" height="30" rx="15" fill="#0E7E8E" stroke="#BAE5E9" stroke-opacity="0.6" />
+  <text x="382" y="50" fill="#BAE5E9" font-family="monospace" font-size="15" font-weight="bold">STREAK 9D</text>
 
-  <!-- App Header Card -->
-  <rect x="40" y="95" width="460" height="170" rx="28" fill="#0E7E8E" stroke="#BAE5E9" stroke-opacity="0.5" stroke-width="2" />
-  <text x="72" y="148" fill="#BAE5E9" font-family="monospace" font-size="18">VEINE MOBILE // SYNC</text>
-  <text x="72" y="192" fill="#EFEFEF" font-family="sans-serif" font-size="34" font-weight="bold">Rp 18.450.000</text>
-  <rect x="72" y="214" width="160" height="28" rx="14" fill="#011427" />
-  <text x="92" y="233" fill="#BAE5E9" font-family="monospace" font-size="14">+24.8% BULAN INI</text>
+  <!-- Main Wallet HP & Balance HUD Card -->
+  <rect x="40" y="85" width="460" height="210" rx="28" fill="#0E7E8E" stroke="#BAE5E9" stroke-opacity="0.55" stroke-width="2" />
+  <text x="72" y="130" fill="#BAE5E9" font-family="monospace" font-size="16">VEINE PULSE // GO CUAN SYNC</text>
+  <text x="72" y="176" fill="#EFEFEF" font-family="sans-serif" font-size="36" font-weight="bold">Rp 18.450.000</text>
+  
+  <!-- Wallet HP Bar inside Card -->
+  <text x="72" y="215" fill="#BAE5E9" font-family="monospace" font-size="14" font-weight="bold">WALLET HP (SAFE BUDGET): 84%</text>
+  <rect x="72" y="228" width="396" height="16" rx="8" fill="#011427" />
+  <rect x="72" y="228" width="332" height="16" rx="8" fill="#BAE5E9" />
+  <text x="72" y="268" fill="#EFEFEF" font-family="monospace" font-size="13">+1.250 / 1.500 XP TO LV.13</text>
 
-  <!-- Activity Chart Box -->
-  <rect x="40" y="295" width="460" height="250" rx="28" fill="#042240" stroke="#BAE5E9" stroke-opacity="0.25" stroke-width="2" />
-  <text x="72" y="342" fill="#BAE5E9" font-family="monospace" font-size="18">REAL-TIME TELEMETRY</text>
-  <polyline points="72,490 145,440 220,465 295,385 375,410 460,350" fill="none" stroke="#BAE5E9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
-  <circle cx="460" cy="350" r="10" fill="#EFEFEF" />
+  <!-- Active Daily Quests Box -->
+  <rect x="40" y="320" width="460" height="230" rx="28" fill="#042240" stroke="#BAE5E9" stroke-opacity="0.3" stroke-width="2" />
+  <text x="72" y="365" fill="#BAE5E9" font-family="monospace" font-size="17" font-weight="bold">ACTIVE FINANCIAL QUESTS</text>
+
+  <!-- Quest 1 -->
+  <rect x="68" y="388" width="404" height="62" rx="16" fill="#011427" stroke="#BAE5E9" stroke-opacity="0.25" />
+  <circle cx="102" cy="419" r="12" fill="#BAE5E9" />
+  <text x="128" y="424" fill="#EFEFEF" font-family="sans-serif" font-size="18" font-weight="bold">No-Impulse Spend Today</text>
+  <text x="385" y="424" fill="#BAE5E9" font-family="monospace" font-size="16" font-weight="bold">+50 XP</text>
+
+  <!-- Quest 2 -->
+  <rect x="68" y="464" width="404" height="62" rx="16" fill="#011427" stroke="#BAE5E9" stroke-opacity="0.25" />
+  <circle cx="102" cy="495" r="12" fill="#0E7E8E" />
+  <text x="128" y="500" fill="#EFEFEF" font-family="sans-serif" font-size="18" font-weight="bold">Save Rp 100k to Shield</text>
+  <text x="375" y="500" fill="#BAE5E9" font-family="monospace" font-size="16" font-weight="bold">+150 XP</text>
 
   <!-- Quick Action Tiles -->
   <rect x="40" y="575" width="218" height="160" rx="24" fill="#042240" stroke="#BAE5E9" stroke-opacity="0.3" stroke-width="2" />
@@ -31,12 +46,11 @@
 
   <rect x="282" y="575" width="218" height="160" rx="24" fill="#BAE5E9" />
   <circle cx="337" cy="630" r="24" fill="#011427" />
-  <text x="314" y="695" fill="#011427" font-family="sans-serif" font-size="22" font-weight="bold">Instant API</text>
+  <text x="314" y="695" fill="#011427" font-family="sans-serif" font-size="22" font-weight="bold">+Quick Log</text>
 
   <!-- Bottom Nav Pill -->
   <rect x="80" y="840" width="380" height="72" rx="36" fill="#011427" stroke="#BAE5E9" stroke-opacity="0.4" stroke-width="2" />
   <circle cx="165" cy="876" r="14" fill="#BAE5E9" />
-  <circle cx="270" cy="876" r="14" fill="#0E7E8E" />
+  <circle cx="270" cy="876" r="18" fill="#EFEFEF" />
   <circle cx="375" cy="876" r="14" fill="#0E7E8E" />
 </svg>
-
